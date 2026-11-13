@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", serif !important;
+}
+
+/* clean styled component */
+@layer components {
+  .card {
+    @apply bg-black text-white rounded-lg py-4 px-5 text-center flex items-center justify-center hover:bg-white hover:text-black transition-all cursor-pointer;
+  }
+
+  .cta_button_card {
+    @apply bg-orange-700 text-white hover:bg-opacity-55 cursor-pointer rounded-lg py-2 px-4 w-40 flex items-center justify-center;
+  }
+
+  .normal_button {
+    @apply mt-5 w-full py-3 px-4 bg-gradient-to-r from-yellow-700 to-yellow-950 rounded-lg hover:from-yellow-950 hover:to-yellow-700 focus:outline-none focus:ring-0  focus:ring-offset-0 transition duration-500 cursor-pointer flex items-center justify-center outline-none border-0 ring-0 text-white hover:text-yellow-200;
+  }
+}
+
+.prata-regular {
+  font-family: "Prata", serif !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.active hr {
+  display: block;
+}
+
+input,
+select {
+  height: 40px !important;
+  width: 100% !important;
+  /* border: 1px solid #b9b9b9 !important; */
+  border-radius: 8px !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+  /* border: 1px solid #b9b9b9 !important; */
+  box-shadow: none !important;
+}
+
+button {
+  /* height: 40px !important; */
+  /* box-shadow: none !important; */
+  cursor: pointer !important;
+}
+
+table {
+  /* border: #b9b9b9 1px solid !important; */
+  border-radius: 3px;
+}
+
+.max-width {
+  max-width: max-content !important;
+}
+
+.input-rounded-full {
+  border-radius: 25px !important;
+}
+
+.small-input {
+  height: 14px !important;
+  width: 14px !important;
+  /* margin-right: 4px !important; */
+}
