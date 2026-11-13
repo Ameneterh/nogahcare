@@ -728,6 +728,7 @@ function App() {
             Read More <ArrowRight size={15} />
           </a>
         </section>
+
         {/* enquiry section */}
         <section className="w-full px-3 py-4 mt-4 section-pad" id="enquiries">
           <div className="max-w-7xl mx-auto my-8 grid grid-cols-1 md:grid-cols-2 gap-20 container enquiry-grid">
@@ -779,7 +780,7 @@ function App() {
 
             <a
               href="#contact"
-              className="flex items-center justify-center gap-2 py-2 px-4 rounded-lg font-bold text-sm cursor-pointer bg-[#28b7a5] hover:bg-[#348d81] text-[#171a43] hover:scale-105 transition-all duration-300 btn btn-teal"
+              className="flex items-center justify-center gap-2 py-2 px-4 rounded-lg font-semibold text-xs text-nowrap cursor-pointer bg-[#28b7a5] hover:bg-[#348d81] text-[#171a43] hover:scale-105 transition-all duration-300 btn btn-teal"
             >
               Contact us <ArrowRight size={17} />
             </a>

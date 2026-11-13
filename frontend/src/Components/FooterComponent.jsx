@@ -163,7 +163,11 @@ export default function FooterComponent() {
         </span>
         <span className="text-center md:text-right">
           Developed & maintained by{" "}
-          <Link to="" className="text-blue-600">
+          <Link
+            to="https://infonetgrafix.onrender.com"
+            className="text-blue-600"
+            target="_blank"
+          >
             Infonet Grafix Global
           </Link>
         </span>
