@@ -8,7 +8,7 @@ export default function MainLayout({ children }) {
     <div className="w-full min-h-screen">
       <HeaderComponent />
       {/* <SearchBar /> */}
-      <main className="px-4 md:px-0">{children}</main>
+      <main className="">{children}</main>
       {window.location.pathname === "/authentication" ? (
         <></>
       ) : (

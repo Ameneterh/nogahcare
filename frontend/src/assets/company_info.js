@@ -6,67 +6,72 @@ import {
   FaWhatsapp,
   FaTiktok,
   FaTelegram,
+  FaTwitter,
 } from "react-icons/fa6";
+import { FiPhoneCall } from "react-icons/fi";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 
 export const company_info = {
-  name: "Rael Diamonds",
-  tagline: ["Excellence", "Reliability", "Quality"],
+  name: "NogahCare",
+  tagline: "Healthcare and Medicines, Made More Accessible",
   // address: "No 5 Irode Matthew Street Ado Ekiti, Ekiti State",
-  call_number: "+2349044868438",
-  whatsapp_number: "2349044868438",
-  email: "pharmnneoma25@yahoo.com",
-  website: "https://raeldiamonds.onrender.com",
-  mission:
-    "To provide a seamless and enjoyable online shopping experience, by providing an easy to use platform for both vendors and shoppers, committed to delivering exceptional customer service, ensuring fast and reliable delivery, and fostering a secure, convenient shopping environment for all our clients.",
-  socials: [
+
+  contact_details: [
     {
-      title: "TikTok",
-      name: "@Rael_diamonds",
-      url: "https://www.tiktok.com/",
-      color: "black",
-      icon: FaTiktok,
+      _id: 1,
+      name: "2347053604735",
+      url: "https://wa.me/",
+      color: "green-600",
+      icon: FaWhatsapp,
     },
     {
+      _id: 2,
+      name: "+2347053604735",
+      url: "tel:",
+      color: "blue-600",
+      icon: FiPhoneCall,
+    },
+    {
+      _id: 3,
+      name: "contact@nogahcare.com.ng",
+      url: "mailto:",
+      color: "blue-600",
+      icon: MdOutlineMarkEmailRead,
+    },
+  ],
+
+  socials: [
+    {
+      _id: 1,
+      title: "Facebook",
+      name: "nogah_care",
+      url: "https://www.facebook.com/",
+      color: "blue-600",
+      icon: FaFacebookF,
+    },
+    {
+      _id: 2,
       title: "Instagram",
-      name: "Rael_diamonds",
+      name: "nogah_care",
       url: "https://www.instagram.com/",
       color: "red-600",
       icon: FaInstagram,
     },
     {
-      title: "Twitter",
-      name: "@Rael_Diamonds",
-      url: "https://www.twitter.com/",
-      color: "black",
-      icon: FaXTwitter,
+      _id: 3,
+      title: "LinkedIn",
+      name: "@nogahcare",
+      url: "https://www.linkedin.com/",
+      color: "blue-600",
+      icon: FaLinkedinIn,
     },
-    // {
-    //   title: "WhatsApp",
-    //   name: "+2349044868438",
-    //   url: "https://wa.me/",
-    //   color: "green-600",
-    //   icon: FaWhatsapp,
-    // },
-    // {
-    //   title: "Email",
-    //   name: "raeldiamonds@gmail.com",
-    //   url: "https://mailto:",
-    //   color: "slate-700",
-    //   icon: MdOutlineMarkEmailRead,
-    // },
-    // {
-    //   title: "Telegram",
-    //   name: "raeldiamonds",
-    //   url: "https://t.me/",
-    //   color: "slate-700",
-    //   icon: FaTelegram,
-    // },
+    {
+      _id: 4,
+      title: "Twitter",
+      name: "@nogahcare",
+      url: "https://www.twitter.com/",
+      color: "blue-600",
+      icon: FaTwitter,
+    },
   ],
-
-  ceo: {
-    name: "UGWUOKE, Rachael Nneoma",
-    ceo_image:
-      "https://png.pngtree.com/png-vector/20240123/ourmid/pngtree-avatar-job-student-flat-portrait-of-african-american-man-png-image_11458426.png",
-  },
 };

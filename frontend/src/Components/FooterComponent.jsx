@@ -27,27 +27,16 @@ export default function FooterComponent() {
           </p>
 
           <div className="flex gap-2">
-            <Link
-              to="#contact"
-              aria-label="Instagram"
-              className="h-7 w-7 rounded-lg grid place-content-center text-[#d8e0f2] bg-[#ffffff17] hover:bg-[#242955] hover:text-white hover:scale-105 transition-all duration-300"
-            >
-              <Instagram size={18} />
-            </Link>
-            <Link
-              to="#contact"
-              aria-label="Facebook"
-              className="h-7 w-7 rounded-lg grid place-content-center text-[#d8e0f2] bg-[#ffffff17] hover:bg-[#242955] hover:text-white hover:scale-105 transition-all duration-300"
-            >
-              <Facebook size={18} />
-            </Link>
-            <Link
-              to="#contact"
-              aria-label="LinkedIn"
-              className="h-7 w-7 rounded-lg grid place-content-center text-[#d8e0f2] bg-[#ffffff17] hover:bg-[#242955] hover:text-white hover:scale-105 transition-all duration-300"
-            >
-              <Linkedin size={18} />
-            </Link>
+            {company_info?.socials?.map((detail) => (
+              <Link
+                to={`${detail.url}${detail.name}`}
+                key={detail._id}
+                aria-label={detail.title}
+                className="h-7 w-7 rounded-lg grid place-content-center text-[#d8e0f2] bg-[#ffffff17] hover:bg-[#242955] hover:text-white hover:scale-105 transition-all duration-300"
+              >
+                <detail.icon size={18} />
+              </Link>
+            ))}
           </div>
         </div>
 

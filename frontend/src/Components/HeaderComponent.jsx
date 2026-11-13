@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { company_info } from "../assets/company_info";
 
 export default function HeaderComponent() {
   const [open, setOpen] = useState(false);
@@ -26,36 +27,24 @@ export default function HeaderComponent() {
     <header className="flex flex-col bg-[#171A3F] px-4 md:px-8 lg:px-10 border-b-2 border-b-white z-50">
       <div className="flex items-center justify-end py-3 gap-3 md:gap-6">
         <div className="flex items-center gap-1">
-          <Link
-            to="#"
-            className="flex items-center justify-center p-1 w-[22px] h-[22px] md:w-6 md:h-6 rounded-full bg-white hover:bg-blue-600 hover:scale-105 transition-all duration-300 hover:text-white"
-          >
-            <PhoneCall />
-          </Link>
-          <Link
-            to="#"
-            className="flex items-center justify-center p-1 w-[22px] h-[22px] md:w-6 md:h-6 rounded-full bg-white hover:bg-blue-600 hover:scale-105 transition-all duration-300 hover:text-white"
-          >
-            <MailPlus />
-          </Link>
-          <Link
-            to="#"
-            className="flex items-center justify-center p-1 w-[22px] h-[22px] md:w-6 md:h-6 rounded-full bg-white hover:bg-blue-600 hover:scale-105 transition-all duration-300 hover:text-white"
-          >
-            <Twitter />
-          </Link>
-          <Link
-            to="#"
-            className="flex items-center justify-center p-1 w-[22px] h-[22px] md:w-6 md:h-6 rounded-full bg-white hover:bg-blue-600 hover:scale-105 transition-all duration-300 hover:text-white"
-          >
-            <Linkedin />
-          </Link>
-          <Link
-            to="#"
-            className="flex items-center justify-center p-1 w-[22px] h-[22px] md:w-6 md:h-6 rounded-full bg-white hover:bg-blue-600 hover:scale-105 transition-all duration-300 hover:text-white"
-          >
-            <Facebook />
-          </Link>
+          {company_info?.contact_details?.map((detail) => (
+            <Link
+              to={`${detail.url}${detail.name}`}
+              key={detail._id}
+              className="flex items-center justify-center p-1 w-[22px] h-[22px] md:w-6 md:h-6 rounded-full bg-white hover:bg-blue-600 hover:scale-105 transition-all duration-300 hover:text-white"
+            >
+              <detail.icon />
+            </Link>
+          ))}
+          {company_info?.socials?.map((social) => (
+            <Link
+              to={`${social.url}${social.name}`}
+              key={social._id}
+              className="flex items-center justify-center p-1 w-[22px] h-[22px] md:w-6 md:h-6 rounded-full bg-white hover:bg-blue-600 hover:scale-105 transition-all duration-300 hover:text-white"
+            >
+              <social.icon />
+            </Link>
+          ))}
         </div>
         <a
           className="bg-blue-600 text-white text-sm px-3 py-1 rounded-md flex items-center"

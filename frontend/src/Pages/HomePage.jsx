@@ -48,6 +48,7 @@ const iconMap = {
 
 export default function HomePage() {
   const [activeFaq, setActiveFaq] = useState(0);
+
   return (
     <MainLayout>
       <>
@@ -389,7 +390,7 @@ export default function HomePage() {
                   {/* <p className="text-sm mt-2 text-yellow-200">
                     Participating pharmacies, connected.
                   </p> */}
-                  <div className=" bg-[#fff] rounded-md py-3 px-4 flex items-center gap-2 text-sm font-semibold shadow-md partner-caption">
+                  <div className=" bg-[#fff] rounded-md py-3 px-4 flex items-center gap-2 text-sm font-semibold shadow-md partner-caption mb-3">
                     <ShieldCheck className="w-10 text-[#168e83]" /> Partner
                     verification is part of the network process.
                   </div>
@@ -550,8 +551,8 @@ export default function HomePage() {
                   ],
                 ].map(([title, desc, tag], i) => (
                   <article
-                    className={`border-[1px] border-[#e1e6ef] rounded-xl overflow-hidden bg-[#fff] resource-card resource-${i + 1}`}
-                    key={title}
+                    className={`hover:scale-105 transition-all duration-300 border-[1px] border-[#e1e6ef] rounded-xl overflow-hidden bg-[#fff] resource-card resource-${i + 1}`}
+                    key={i}
                   >
                     <div className="flex h-40 items-center justify-center relative text-[#fff] bg-gradient-to-tr from-[#22305e] to-[#557f9c] resource-visual">
                       <span className="absolute left-4 top-4 text-xs font-extrabold text-[#ffffffbf]">
@@ -560,10 +561,12 @@ export default function HomePage() {
                       <BookOpen size={42} />
                     </div>
                     <div className="p-5 resource-content">
-                      <small className="text-xs text-[#168e83] font-extrabold">
+                      <small className="text-xs text-[#168e83] font-extrabold cursor-pointer">
                         HEALTH EDUCATION
                       </small>
-                      <h3 className="text-lg text-[#171a43] my-2">{title}</h3>
+                      <h3 className="text-lg text-[#171a43] my-2 cursor-pointer">
+                        {title}
+                      </h3>
                       <p className="text-xs text-slate-900 line-clamp-3">
                         {desc}
                       </p>
@@ -589,7 +592,7 @@ export default function HomePage() {
                 ].map(([title, videoId, tag], i) => (
                   <article
                     className={`border-[1px] border-[#e1e6ef] rounded-xl overflow-hidden bg-[#fff] resource-card resource-${i + 1}`}
-                    key={title}
+                    key={i + title}
                   >
                     <div className="flex h-60 items-center justify-center relative text-[#fff] bg-gradient-to-tr from-[#22305e] to-[#557f9c] w-full aspect-video resource-visual">
                       <iframe

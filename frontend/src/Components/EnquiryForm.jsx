@@ -4,6 +4,7 @@ import { FaLinkedinIn, FaSms, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
+import { company_info } from "../assets/company_info";
 
 const initial = {
   name: "",
@@ -163,30 +164,19 @@ export default function EnquiryForm({
 export function SocialMediaContacts() {
   return (
     <article className="mt-8 flex items-center">
-      <Link
-        to={`#`}
-        className="w-10 h-10 grid place-items-center rounded-xl hover:bg-slate-100"
-      >
-        <FaWhatsapp size={25} className="text-green-900" />
-      </Link>
-      <Link
-        to={`#`}
-        className="w-10 h-10 grid place-items-center rounded-xl hover:bg-slate-100"
-      >
-        <FaSms size={25} className="text-black" />
-      </Link>
-      <Link
-        to={`#`}
-        className="w-10 h-10 grid place-items-center rounded-xl hover:bg-slate-100"
-      >
-        <BiSolidPhoneCall size={22} className="text-blue-900" />
-      </Link>
-      <Link
-        to={`#`}
-        className="w-10 h-10 grid place-items-center rounded-xl hover:bg-slate-100"
-      >
-        <MdOutlineMarkEmailRead size={22} className="text-red-900" />
-      </Link>
+      {company_info?.contact_details?.map((detail) => (
+        <a
+          href={`${detail.url}${detail.name}`}
+          className="w-10 h-10 grid place-items-center rounded-xl hover:bg-slate-100"
+          target="_blank"
+          key={detail._id}
+        >
+          <detail.icon
+            size={22}
+            className={`hover:scale-125 transition-all duration-300 text-${detail.color}`}
+          />
+        </a>
+      ))}
     </article>
   );
 }
