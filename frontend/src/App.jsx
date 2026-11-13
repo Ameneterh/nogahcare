@@ -27,7 +27,7 @@ import {
   CircleUserRound,
 } from "lucide-react";
 import { FaRegUserCircle, FaStar, FaStarHalfAlt } from "react-icons/fa";
-import SectionHeading from "./components/SectionHeading";
+import SectionHeading from "./Components/SectionHeading";
 import EnquiryForm, { SocialMediaContacts } from "./components/EnquiryForm";
 import { services, benefits, faqs } from "./data/siteContent";
 import HeaderComponent from "./Components/HeaderComponent";
