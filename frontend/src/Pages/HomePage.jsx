@@ -2,8 +2,6 @@ import MainLayout from "../layout/MainLayout";
 import { useState } from "react";
 import {
   ArrowRight,
-  Menu,
-  X,
   Stethoscope,
   Pill,
   ClipboardList,
@@ -16,26 +14,18 @@ import {
   UserRoundCheck,
   Store,
   ChevronDown,
-  Clock3,
-  Sparkles,
   Mail,
   Phone,
   MapPin,
-  Instagram,
-  Facebook,
-  Linkedin,
-  ArrowUpRight,
-  CircleUserRound,
 } from "lucide-react";
 import { FaRegUserCircle, FaStar, FaStarHalfAlt } from "react-icons/fa";
 import SectionHeading from "../Components/SectionHeading";
 import EnquiryForm, { SocialMediaContacts } from "../Components/EnquiryForm";
 import { services, benefits, faqs } from "../data/siteContent";
-import HeaderComponent from "../Components/HeaderComponent";
 import HeroComponent from "../Components/HeroComponent";
 import { Link } from "react-router-dom";
-import FooterComponent from "../Components/FooterComponent";
 import ServiceCard from "../Components/CommonParts/ServiceCard";
+import { company_info } from "../assets/company_info";
 
 const iconMap = {
   stethoscope: Stethoscope,
@@ -814,36 +804,36 @@ export default function HomePage() {
                   <Mail className="w-5 text-[#168e83]" />
                   <span className="grid">
                     <b className="text-[#171a43] text-sm">Email</b>
-                    <Link
-                      to="#"
+                    <a
+                      href={`${company_info?.contact_details[2]?.url}${company_info?.contact_details[2]?.name}`}
                       className="text-[#687087] text-sm hover:text-blue-600 hover:underline underline-offset-2 -mt-1"
                     >
-                      contact@nogahcare.com
-                    </Link>
+                      {`${company_info?.contact_details[2]?.name}`}
+                    </a>
                   </span>
                 </div>
                 <div className="flex gap-3 items-center mt-5 contact-detail">
                   <Phone className="w-5 text-[#168e83]" />
                   <span className="grid">
                     <b className="text-[#171a43] text-sm">Call</b>
-                    <Link
-                      to="#"
+                    <a
+                      href={`${company_info?.contact_details[1]?.url}${company_info?.contact_details[1]?.name}`}
                       className="text-[#687087] text-sm hover:text-blue-600 hover:underline underline-offset-2 -mt-1"
                     >
-                      Official support number to be added
-                    </Link>
+                      {`${company_info?.contact_details[1]?.name}`}
+                    </a>
                   </span>
                 </div>
                 <div className="flex gap-3 items-center mt-5 contact-detail">
                   <Phone className="w-5 text-[#168e83]" />
                   <span className="grid">
                     <b className="text-[#171a43] text-sm">WhatsApp</b>
-                    <Link
-                      to="#"
+                    <a
+                      href={`${company_info?.contact_details[0]?.url}${company_info?.contact_details[0]?.name}`}
                       className="text-[#687087] text-sm hover:text-blue-600 hover:underline underline-offset-2 -mt-1"
                     >
-                      Official support number to be added
-                    </Link>
+                      +{company_info?.contact_details[0]?.name}
+                    </a>
                   </span>
                 </div>
                 <div className="flex gap-3 items-center mt-5 contact-detail">
