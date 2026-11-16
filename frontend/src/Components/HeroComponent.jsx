@@ -34,7 +34,7 @@ export default function HeroComponent() {
 
   return (
     <section
-      className="w-full flex flex-col bg-[#171A3F] gap-8 min-h-screen"
+      className="w-full flex flex-col bg-[#171A3F] gap-8 min-h-screen items-center"
       id="home"
       style={{
         backgroundImage: "url('/hero_bg.png')",
@@ -44,7 +44,7 @@ export default function HeroComponent() {
       }}
     >
       <div className="flex flex-col bg-[radial-gradient(circle,rgba(255,255,255,0.9)_0%,rgba(0,31,63,0.8)_100%)] gap-8 min-h-screen py-10 px-4 md:px-8 lg:px-10 bg-opacity-70">
-        <div className="flex flex-col max-w-7xl mx-auto">
+        <div className="flex flex-col max-w-7xl mx-auto h-full">
           <p className="text-xs md:text-sm font-semibold text-green-500 flex items-center gap-1">
             <span className="bg-green-600 rounded-full h-1 w-1 shadow-md"></span>
             NOGAH CARE | DIGITAL HEALTHCARE
